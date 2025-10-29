@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Music Projects</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            /* CUSTOMIZE THESE COLORS */
+            --bg-color: #0a0a0a;
+            --card-bg: #1a1a1a;
+            --text-color: #ffffff;
+            --accent-color: #00ff88;
+            --subtitle-color: #888;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: var(--bg-color);
+            color: var(--text-color);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 60px;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 15px;
+            letter-spacing: -1px;
+            background: linear-gradient(135deg, var(--accent-color), #00ccff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: var(--subtitle-color);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            animation: fadeIn 1s ease-out 0.2s backwards;
+        }
+
+        .project-card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: var(--text-color);
+            display: block;
+            border: 2px solid transparent;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--accent-color);
+            box-shadow: 0 12px 40px rgba(0, 255, 136, 0.2);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+        }
+
+        .project-info {
+            padding: 24px;
+        }
+
+        .project-name {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+
+        .project-genre {
+            font-size: 14px;
+            color: var(--accent-color);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .project-description {
+            font-size: 15px;
+            color: var(--subtitle-color);
+            line-height: 1.6;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 80px;
+            padding-top: 40px;
+            border-top: 1px solid #333;
+        }
+
+        .footer p {
+            color: var(--subtitle-color);
+            font-size: 14px;
+        }
+
+        .footer a {
+            color: var(--accent-color);
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .footer a:hover {
+            opacity: 0.7;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- HERO SECTION -->
+        <div class="hero">
+            <!-- CUSTOMIZE YOUR NAME AND BIO -->
+            <h1>Your Name</h1>
+            <p>Multi-genre music producer exploring sonic landscapes. Select a project below to listen and connect.</p>
+        </div>
+
+        <!-- PROJECTS GRID -->
+        <div class="projects-grid">
+            <!-- PROJECT 1 - DUPLICATE THIS BLOCK FOR EACH PROJECT -->
+            <a href="/project-one/index.html" class="project-card">
+                <img src="https://via.placeholder.com/400x250" alt="Project One" class="project-image">
+                <div class="project-info">
+                    <div class="project-genre">Electronic / Ambient</div>
+                    <h2 class="project-name">Project One</h2>
+                    <p class="project-description">
+                        Atmospheric electronic soundscapes blending ambient textures with rhythmic elements.
+                    </p>
+                </div>
+            </a>
+
+            <!-- PROJECT 2 -->
+            <a href="/project-two/index.html" class="project-card">
+                <img src="https://via.placeholder.com/400x250" alt="Project Two" class="project-image">
+                <div class="project-info">
+                    <div class="project-genre">Techno / House</div>
+                    <h2 class="project-name">Project Two</h2>
+                    <p class="project-description">
+                        Hard-hitting techno and house tracks for the dancefloor. Raw energy and driving beats.
+                    </p>
+                </div>
+            </a>
+
+            <!-- PROJECT 3 -->
+            <a href="/project-three/index.html" class="project-card">
+                <img src="https://via.placeholder.com/400x250" alt="Project Three" class="project-image">
+                <div class="project-info">
+                    <div class="project-genre">Experimental</div>
+                    <h2 class="project-name">Project Three</h2>
+                    <p class="project-description">
+                        Boundary-pushing experimental music. Field recordings meet synthesized chaos.
+                    </p>
+                </div>
+            </a>
+
+            <!-- ADD MORE PROJECTS BY COPYING THE BLOCK ABOVE -->
+        </div>
+
+        <!-- FOOTER -->
+        <div class="footer">
+            <p>© 2025 Your Name. All rights reserved. | <a href="mailto:your@email.com">Contact</a></p>
+        </div>
+    </div>
+</body>
+</html>
